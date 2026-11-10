@@ -1,0 +1,1085 @@
+# QiaOrbit 规则表
+# 格式：kind（domain / ip / app）+ value + action（direct / proxy / reject）
+# 域名条目同时匹配其子域名，例如 baidu.com 会匹配 map.baidu.com
+
+# ───────── 国内常用（直连） ─────────
+rules:
+  - kind: domain
+    value: baidu.com
+    action: direct
+    note: 百度
+  - kind: domain
+    value: bdstatic.com
+    action: direct
+    note: 百度静态资源
+  - kind: domain
+    value: bdimg.com
+    action: direct
+    note: 百度图片
+  - kind: domain
+    value: qq.com
+    action: direct
+    note: 腾讯
+  - kind: domain
+    value: qqmail.com
+    action: direct
+    note: QQ 邮箱
+  - kind: domain
+    value: qpic.cn
+    action: direct
+    note: 腾讯图片
+  - kind: domain
+    value: gtimg.com
+    action: direct
+    note: 腾讯静态
+  - kind: domain
+    value: weixin.qq.com
+    action: direct
+    note: 微信
+  - kind: domain
+    value: wechat.com
+    action: direct
+    note: 微信国际版
+  - kind: domain
+    value: tencent.com
+    action: direct
+    note: 腾讯官网
+  - kind: domain
+    value: tencentcloud.com
+    action: direct
+    note: 腾讯云
+  - kind: domain
+    value: myqcloud.com
+    action: direct
+    note: 腾讯云 CDN
+  - kind: domain
+    value: wechatpay.cn
+    action: direct
+    note: 微信支付
+  - kind: domain
+    value: alibaba.com
+    action: direct
+    note: 阿里巴巴
+  - kind: domain
+    value: aliyun.com
+    action: direct
+    note: 阿里云
+  - kind: domain
+    value: aliyuncs.com
+    action: direct
+    note: 阿里云 OSS
+  - kind: domain
+    value: taobao.com
+    action: direct
+    note: 淘宝
+  - kind: domain
+    value: tmall.com
+    action: direct
+    note: 天猫
+  - kind: domain
+    value: alicdn.com
+    action: direct
+    note: 阿里 CDN
+  - kind: domain
+    value: tbcdn.cn
+    action: direct
+    note: 淘宝 CDN
+  - kind: domain
+    value: alipay.com
+    action: direct
+    note: 支付宝
+  - kind: domain
+    value: alipayobjects.com
+    action: direct
+    note: 支付宝静态资源
+  - kind: domain
+    value: jd.com
+    action: direct
+    note: 京东
+  - kind: domain
+    value: 360buyimg.com
+    action: direct
+    note: 京东图片
+  - kind: domain
+    value: jdpay.com
+    action: direct
+    note: 京东支付
+  - kind: domain
+    value: pinduoduo.com
+    action: direct
+    note: 拼多多
+  - kind: domain
+    value: yangkeduo.com
+    action: direct
+    note: 拼多多
+  - kind: domain
+    value: meituan.com
+    action: direct
+    note: 美团
+  - kind: domain
+    value: meituan.net
+    action: direct
+    note: 美团静态
+  - kind: domain
+    value: dianping.com
+    action: direct
+    note: 大众点评
+  - kind: domain
+    value: ele.me
+    action: direct
+    note: 饿了么
+  - kind: domain
+    value: 163.com
+    action: direct
+    note: 网易
+  - kind: domain
+    value: 126.net
+    action: direct
+    note: 网易静态
+  - kind: domain
+    value: 127.net
+    action: direct
+    note: 网易邮箱
+  - kind: domain
+    value: netease.com
+    action: direct
+    note: 网易
+  - kind: domain
+    value: weibo.com
+    action: direct
+    note: 微博
+  - kind: domain
+    value: weibo.cn
+    action: direct
+    note: 微博移动版
+  - kind: domain
+    value: sina.com.cn
+    action: direct
+    note: 新浪
+  - kind: domain
+    value: sinaimg.cn
+    action: direct
+    note: 新浪图片
+  - kind: domain
+    value: sohu.com
+    action: direct
+    note: 搜狐
+  - kind: domain
+    value: ifeng.com
+    action: direct
+    note: 凤凰网
+  - kind: domain
+    value: bilibili.com
+    action: direct
+    note: 哔哩哔哩
+  - kind: domain
+    value: hdslb.com
+    action: direct
+    note: B 站静态资源
+  - kind: domain
+    value: bilivideo.com
+    action: direct
+    note: B 站视频
+  - kind: domain
+    value: acgvideo.com
+    action: direct
+    note: B 站视频
+  - kind: domain
+    value: iqiyi.com
+    action: direct
+    note: 爱奇艺
+  - kind: domain
+    value: iqiyipic.com
+    action: direct
+    note: 爱奇艺图片
+  - kind: domain
+    value: youku.com
+    action: direct
+    note: 优酷
+  - kind: domain
+    value: tudou.com
+    action: direct
+    note: 土豆
+  - kind: domain
+    value: douyin.com
+    action: direct
+    note: 抖音
+  - kind: domain
+    value: douyinpic.com
+    action: direct
+    note: 抖音图片
+  - kind: domain
+    value: douyinvod.com
+    action: direct
+    note: 抖音视频
+  - kind: domain
+    value: ixigua.com
+    action: direct
+    note: 西瓜视频
+  - kind: domain
+    value: kuaishou.com
+    action: direct
+    note: 快手
+  - kind: domain
+    value: kwaicdn.com
+    action: direct
+    note: 快手 CDN
+  - kind: domain
+    value: xiaohongshu.com
+    action: direct
+    note: 小红书
+  - kind: domain
+    value: xhscdn.com
+    action: direct
+    note: 小红书 CDN
+  - kind: domain
+    value: zhihu.com
+    action: direct
+    note: 知乎
+  - kind: domain
+    value: zhimg.com
+    action: direct
+    note: 知乎图片
+  - kind: domain
+    value: douban.com
+    action: direct
+    note: 豆瓣
+  - kind: domain
+    value: doubanio.com
+    action: direct
+    note: 豆瓣静态
+  - kind: domain
+    value: csdn.net
+    action: direct
+    note: CSDN
+  - kind: domain
+    value: juejin.cn
+    action: direct
+    note: 掘金
+  - kind: domain
+    value: gitee.com
+    action: direct
+    note: Gitee
+  - kind: domain
+    value: oschina.net
+    action: direct
+    note: 开源中国
+  - kind: domain
+    value: cnblogs.com
+    action: direct
+    note: 博客园
+  - kind: domain
+    value: 51cto.com
+    action: direct
+    note: 51CTO
+  - kind: domain
+    value: xunlei.com
+    action: direct
+    note: 迅雷
+  - kind: domain
+    value: alipan.com
+    action: direct
+    note: 阿里云盘
+  - kind: domain
+    value: 123pan.com
+    action: direct
+    note: 123 云盘
+  - kind: domain
+    value: pan.baidu.com
+    action: direct
+    note: 百度网盘
+  - kind: domain
+    value: wps.cn
+    action: direct
+    note: WPS
+  - kind: domain
+    value: kdocs.cn
+    action: direct
+    note: 金山文档
+  - kind: domain
+    value: feishu.cn
+    action: direct
+    note: 飞书
+  - kind: domain
+    value: dingtalk.com
+    action: direct
+    note: 钉钉
+  - kind: domain
+    value: amap.com
+    action: direct
+    note: 高德地图
+  - kind: domain
+    value: 12306.cn
+    action: direct
+    note: 铁路 12306
+  - kind: domain
+    value: ctrip.com
+    action: direct
+    note: 携程
+  - kind: domain
+    value: qunar.com
+    action: direct
+    note: 去哪儿
+  - kind: domain
+    value: xiaomi.com
+    action: direct
+    note: 小米
+  - kind: domain
+    value: mi.com
+    action: direct
+    note: 小米商城
+  - kind: domain
+    value: miui.com
+    action: direct
+    note: MIUI
+  - kind: domain
+    value: huawei.com
+    action: direct
+    note: 华为
+  - kind: domain
+    value: hicloud.com
+    action: direct
+    note: 华为云
+  - kind: domain
+    value: honor.com
+    action: direct
+    note: 荣耀
+  - kind: domain
+    value: oppo.com
+    action: direct
+    note: OPPO
+  - kind: domain
+    value: vivo.com
+    action: direct
+    note: vivo
+  - kind: domain
+    value: 360.cn
+    action: direct
+    note: 360
+  - kind: domain
+    value: so.com
+    action: direct
+    note: 360 搜索
+  - kind: domain
+    value: qihoo.net
+    action: direct
+    note: 360 静态
+  - kind: domain
+    value: bytedance.com
+    action: direct
+    note: 字节跳动
+  - kind: domain
+    value: byteimg.com
+    action: direct
+    note: 字节图片
+  - kind: domain
+    value: snssdk.com
+    action: direct
+    note: 字节 SDK
+  - kind: domain
+    value: toutiao.com
+    action: direct
+    note: 今日头条
+  - kind: domain
+    value: gov.cn
+    action: direct
+    note: 政府网站
+  - kind: domain
+    value: edu.cn
+    action: direct
+    note: 教育网
+  - kind: domain
+    value: 10086.cn
+    action: direct
+    note: 中国移动
+  - kind: domain
+    value: chinamobile.com
+    action: direct
+    note: 中国移动
+  - kind: domain
+    value: 10010.com
+    action: direct
+    note: 中国联通
+  - kind: domain
+    value: chinaunicom.com
+    action: direct
+    note: 中国联通
+  - kind: domain
+    value: 189.cn
+    action: direct
+    note: 中国电信
+  - kind: domain
+    value: chinatelecom.com.cn
+    action: direct
+    note: 中国电信
+
+# ───────── 国外常用（代理） ─────────
+  - kind: domain
+    value: google.com
+    action: proxy
+    note: Google
+  - kind: domain
+    value: googleapis.com
+    action: proxy
+    note: Google API
+  - kind: domain
+    value: gstatic.com
+    action: proxy
+    note: Google 静态
+  - kind: domain
+    value: googleusercontent.com
+    action: proxy
+    note: Google 用户内容
+  - kind: domain
+    value: googlevideo.com
+    action: proxy
+    note: Google 视频
+  - kind: domain
+    value: ggpht.com
+    action: proxy
+    note: Google 图片
+  - kind: domain
+    value: gmail.com
+    action: proxy
+    note: Gmail
+  - kind: domain
+    value: googlemail.com
+    action: proxy
+    note: Gmail
+  - kind: domain
+    value: google.dev
+    action: proxy
+    note: Google 开发者
+  - kind: domain
+    value: youtube.com
+    action: proxy
+    note: YouTube
+  - kind: domain
+    value: youtu.be
+    action: proxy
+    note: YouTube 短链
+  - kind: domain
+    value: ytimg.com
+    action: proxy
+    note: YouTube 图片
+  - kind: domain
+    value: github.com
+    action: proxy
+    note: GitHub
+  - kind: domain
+    value: githubusercontent.com
+    action: proxy
+    note: GitHub Raw
+  - kind: domain
+    value: githubassets.com
+    action: proxy
+    note: GitHub 静态
+  - kind: domain
+    value: github.io
+    action: proxy
+    note: GitHub Pages
+  - kind: domain
+    value: ghcr.io
+    action: proxy
+    note: GitHub 容器镜像
+  - kind: domain
+    value: npmjs.com
+    action: proxy
+    note: npm
+  - kind: domain
+    value: npmjs.org
+    action: proxy
+    note: npm 镜像
+  - kind: domain
+    value: yarnpkg.com
+    action: proxy
+    note: Yarn
+  - kind: domain
+    value: pypi.org
+    action: proxy
+    note: PyPI
+  - kind: domain
+    value: pythonhosted.org
+    action: proxy
+    note: PyPI 文件
+  - kind: domain
+    value: rubygems.org
+    action: proxy
+    note: RubyGems
+  - kind: domain
+    value: crates.io
+    action: proxy
+    note: crates.io
+  - kind: domain
+    value: golang.org
+    action: proxy
+    note: Go
+  - kind: domain
+    value: go.dev
+    action: proxy
+    note: Go 官网
+  - kind: domain
+    value: docker.com
+    action: proxy
+    note: Docker
+  - kind: domain
+    value: docker.io
+    action: proxy
+    note: Docker Hub
+  - kind: domain
+    value: jetbrains.com
+    action: proxy
+    note: JetBrains
+  - kind: domain
+    value: stackoverflow.com
+    action: proxy
+    note: Stack Overflow
+  - kind: domain
+    value: stackexchange.com
+    action: proxy
+    note: Stack Exchange
+  - kind: domain
+    value: medium.com
+    action: proxy
+    note: Medium
+  - kind: domain
+    value: dev.to
+    action: proxy
+    note: DEV
+  - kind: domain
+    value: hashnode.com
+    action: proxy
+    note: Hashnode
+  - kind: domain
+    value: vercel.com
+    action: proxy
+    note: Vercel
+  - kind: domain
+    value: netlify.com
+    action: proxy
+    note: Netlify
+  - kind: domain
+    value: cloudflare.com
+    action: proxy
+    note: Cloudflare
+  - kind: domain
+    value: workers.dev
+    action: proxy
+    note: Cloudflare Workers
+  - kind: domain
+    value: fly.io
+    action: proxy
+    note: Fly.io
+  - kind: domain
+    value: heroku.com
+    action: proxy
+    note: Heroku
+  - kind: domain
+    value: render.com
+    action: proxy
+    note: Render
+  - kind: domain
+    value: railway.app
+    action: proxy
+    note: Railway
+  - kind: domain
+    value: supabase.co
+    action: proxy
+    note: Supabase
+  - kind: domain
+    value: sentry.io
+    action: proxy
+    note: Sentry
+  - kind: domain
+    value: linear.app
+    action: proxy
+    note: Linear
+  - kind: domain
+    value: notion.so
+    action: proxy
+    note: Notion
+  - kind: domain
+    value: notion.site
+    action: proxy
+    note: Notion 站点
+  - kind: domain
+    value: figma.com
+    action: proxy
+    note: Figma
+  - kind: domain
+    value: canva.com
+    action: proxy
+    note: Canva
+  - kind: domain
+    value: miro.com
+    action: proxy
+    note: Miro
+  - kind: domain
+    value: trello.com
+    action: proxy
+    note: Trello
+  - kind: domain
+    value: atlassian.com
+    action: proxy
+    note: Atlassian
+  - kind: domain
+    value: slack.com
+    action: proxy
+    note: Slack
+  - kind: domain
+    value: zoom.us
+    action: proxy
+    note: Zoom
+  - kind: domain
+    value: loom.com
+    action: proxy
+    note: Loom
+  - kind: domain
+    value: airtable.com
+    action: proxy
+    note: Airtable
+  - kind: domain
+    value: dropbox.com
+    action: proxy
+    note: Dropbox
+  - kind: domain
+    value: box.com
+    action: proxy
+    note: Box
+  - kind: domain
+    value: 1password.com
+    action: proxy
+    note: 1Password
+  - kind: domain
+    value: proton.me
+    action: proxy
+    note: Proton
+  - kind: domain
+    value: protonmail.com
+    action: proxy
+    note: Proton Mail
+  - kind: domain
+    value: twitter.com
+    action: proxy
+    note: X（Twitter）
+  - kind: domain
+    value: x.com
+    action: proxy
+    note: X
+  - kind: domain
+    value: twimg.com
+    action: proxy
+    note: X 图片
+  - kind: domain
+    value: t.co
+    action: proxy
+    note: X 短链
+  - kind: domain
+    value: facebook.com
+    action: proxy
+    note: Facebook
+  - kind: domain
+    value: fb.com
+    action: proxy
+    note: Facebook
+  - kind: domain
+    value: fbcdn.net
+    action: proxy
+    note: Facebook CDN
+  - kind: domain
+    value: instagram.com
+    action: proxy
+    note: Instagram
+  - kind: domain
+    value: cdninstagram.com
+    action: proxy
+    note: Instagram CDN
+  - kind: domain
+    value: whatsapp.com
+    action: proxy
+    note: WhatsApp
+  - kind: domain
+    value: whatsapp.net
+    action: proxy
+    note: WhatsApp 网络
+  - kind: domain
+    value: telegram.org
+    action: proxy
+    note: Telegram
+  - kind: domain
+    value: telegram.me
+    action: proxy
+    note: Telegram 链接
+  - kind: domain
+    value: t.me
+    action: proxy
+    note: Telegram 链接
+  - kind: domain
+    value: telesco.pe
+    action: proxy
+    note: Telegram 语音
+  - kind: domain
+    value: discord.com
+    action: proxy
+    note: Discord
+  - kind: domain
+    value: discordapp.com
+    action: proxy
+    note: Discord 旧域名
+  - kind: domain
+    value: discord.gg
+    action: proxy
+    note: Discord 邀请
+  - kind: domain
+    value: reddit.com
+    action: proxy
+    note: Reddit
+  - kind: domain
+    value: redd.it
+    action: proxy
+    note: Reddit 短链
+  - kind: domain
+    value: redditmedia.com
+    action: proxy
+    note: Reddit 媒体
+  - kind: domain
+    value: tumblr.com
+    action: proxy
+    note: Tumblr
+  - kind: domain
+    value: pinterest.com
+    action: proxy
+    note: Pinterest
+  - kind: domain
+    value: linkedin.com
+    action: proxy
+    note: LinkedIn
+  - kind: domain
+    value: licdn.com
+    action: proxy
+    note: LinkedIn CDN
+  - kind: domain
+    value: quora.com
+    action: proxy
+    note: Quora
+  - kind: domain
+    value: substack.com
+    action: proxy
+    note: Substack
+  - kind: domain
+    value: patreon.com
+    action: proxy
+    note: Patreon
+  - kind: domain
+    value: wikipedia.org
+    action: proxy
+    note: 维基百科
+  - kind: domain
+    value: wikimedia.org
+    action: proxy
+    note: 维基媒体
+  - kind: domain
+    value: archive.org
+    action: proxy
+    note: Internet Archive
+  - kind: domain
+    value: imdb.com
+    action: proxy
+    note: IMDb
+  - kind: domain
+    value: spotify.com
+    action: proxy
+    note: Spotify
+  - kind: domain
+    value: scdn.co
+    action: proxy
+    note: Spotify CDN
+  - kind: domain
+    value: soundcloud.com
+    action: proxy
+    note: SoundCloud
+  - kind: domain
+    value: netflix.com
+    action: proxy
+    note: Netflix
+  - kind: domain
+    value: nflxvideo.net
+    action: proxy
+    note: Netflix 视频
+  - kind: domain
+    value: nflximg.net
+    action: proxy
+    note: Netflix 图片
+  - kind: domain
+    value: hulu.com
+    action: proxy
+    note: Hulu
+  - kind: domain
+    value: disneyplus.com
+    action: proxy
+    note: Disney+
+  - kind: domain
+    value: hbomax.com
+    action: proxy
+    note: HBO Max
+  - kind: domain
+    value: primevideo.com
+    action: proxy
+    note: Prime Video
+  - kind: domain
+    value: twitch.tv
+    action: proxy
+    note: Twitch
+  - kind: domain
+    value: ttvnw.net
+    action: proxy
+    note: Twitch CDN
+  - kind: domain
+    value: vimeo.com
+    action: proxy
+    note: Vimeo
+  - kind: domain
+    value: dailymotion.com
+    action: proxy
+    note: Dailymotion
+  - kind: domain
+    value: openai.com
+    action: proxy
+    note: OpenAI
+  - kind: domain
+    value: chatgpt.com
+    action: proxy
+    note: ChatGPT
+  - kind: domain
+    value: oaistatic.com
+    action: proxy
+    note: OpenAI 静态
+  - kind: domain
+    value: oaiusercontent.com
+    action: proxy
+    note: OpenAI 用户内容
+  - kind: domain
+    value: anthropic.com
+    action: proxy
+    note: Anthropic
+  - kind: domain
+    value: claude.ai
+    action: proxy
+    note: Claude
+  - kind: domain
+    value: perplexity.ai
+    action: proxy
+    note: Perplexity
+  - kind: domain
+    value: midjourney.com
+    action: proxy
+    note: Midjourney
+  - kind: domain
+    value: huggingface.co
+    action: proxy
+    note: Hugging Face
+  - kind: domain
+    value: replicate.com
+    action: proxy
+    note: Replicate
+  - kind: domain
+    value: cohere.ai
+    action: proxy
+    note: Cohere
+  - kind: domain
+    value: groq.com
+    action: proxy
+    note: Groq
+  - kind: domain
+    value: cursor.com
+    action: proxy
+    note: Cursor
+
+# ───────── 广告与统计（拦截） ─────────
+  - kind: domain
+    value: doubleclick.net
+    action: reject
+    note: 广告
+  - kind: domain
+    value: googleadservices.com
+    action: reject
+    note: 广告
+  - kind: domain
+    value: googlesyndication.com
+    action: reject
+    note: 广告
+  - kind: domain
+    value: adservice.google.com
+    action: reject
+    note: 广告
+  - kind: domain
+    value: app-measurement.com
+    action: reject
+    note: 统计上报
+  - kind: domain
+    value: adjust.com
+    action: reject
+    note: 统计上报
+  - kind: domain
+    value: appsflyer.com
+    action: reject
+    note: 统计上报
+  - kind: domain
+    value: branch.io
+    action: reject
+    note: 统计上报
+
+# ───────── 应用（按进程名，PROCESS-NAME） ─────────
+# 只对单一用途的应用生效；浏览器不在此列，浏览器按域名规则走
+  - kind: app
+    value: WeChat
+    action: direct
+    note: 微信
+  - kind: app
+    value: QQ
+    action: direct
+    note: QQ
+  - kind: app
+    value: DingTalk
+    action: direct
+    note: 钉钉
+  - kind: app
+    value: Alipay
+    action: direct
+    note: 支付宝
+  - kind: app
+    value: Taobao
+    action: direct
+    note: 淘宝
+  - kind: app
+    value: Douyin
+    action: direct
+    note: 抖音
+  - kind: app
+    value: bilibili
+    action: direct
+    note: 哔哩哔哩
+  - kind: app
+    value: NeteaseMusic
+    action: direct
+    note: 网易云音乐
+  - kind: app
+    value: iQIYI
+    action: direct
+    note: 爱奇艺
+  - kind: app
+    value: TencentVideo
+    action: direct
+    note: 腾讯视频
+  - kind: app
+    value: RED
+    action: direct
+    note: 小红书
+  - kind: app
+    value: BaiduNetdisk
+    action: direct
+    note: 百度网盘
+  - kind: app
+    value: wpsoffice
+    action: direct
+    note: WPS
+  - kind: app
+    value: Thunder
+    action: direct
+    note: 迅雷
+  - kind: app
+    value: WeCom
+    action: direct
+    note: 企业微信
+  - kind: app
+    value: Feishu
+    action: direct
+    note: 飞书
+  - kind: app
+    value: wemeetapp
+    action: direct
+    note: 腾讯会议
+  - kind: app
+    value: QQMusic
+    action: direct
+    note: QQ 音乐
+  - kind: app
+    value: AliWangWang
+    action: direct
+    note: 千牛
+  - kind: app
+    value: Telegram
+    action: proxy
+    note: Telegram
+  - kind: app
+    value: WhatsApp
+    action: proxy
+    note: WhatsApp
+  - kind: app
+    value: Discord
+    action: proxy
+    note: Discord
+  - kind: app
+    value: Slack
+    action: proxy
+    note: Slack
+  - kind: app
+    value: Spotify
+    action: proxy
+    note: Spotify
+  - kind: app
+    value: Notion
+    action: proxy
+    note: Notion
+  - kind: app
+    value: Figma
+    action: proxy
+    note: Figma
+  - kind: app
+    value: zoom.us
+    action: proxy
+    note: Zoom
+  - kind: app
+    value: GitHub Desktop
+    action: proxy
+    note: GitHub Desktop
+  - kind: app
+    value: ChatGPT
+    action: proxy
+    note: ChatGPT
+  - kind: app
+    value: Claude
+    action: proxy
+    note: Claude
+  - kind: app
+    value: Steam
+    action: proxy
+    note: Steam
+  - kind: app
+    value: Docker
+    action: proxy
+    note: Docker
+  - kind: app
+    value: Code
+    action: proxy
+    note: Visual Studio Code
+  - kind: app
+    value: Obsidian
+    action: proxy
+    note: Obsidian
+  - kind: app
+    value: 1Password
+    action: proxy
+    note: 1Password
+  - kind: app
+    value: Dropbox
+    action: proxy
+    note: Dropbox
+  - kind: app
+    value: Linear
+    action: proxy
+    note: Linear
+  - kind: app
+    value: Postman
+    action: proxy
+    note: Postman
